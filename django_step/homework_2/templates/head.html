@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Head</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/stylesheet.css'%}">
+</head>
+<body>
+    <ul id="navbar">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'news' %}">News</a></li>
+        <li><a href="{% url 'head' %}">Head of city</a></li>
+        <li><a href="{% url 'facts' %}">Facts</a></li>
+        <li><a href="{% url 'history' %}">History</a>
+            <ul>
+                <li><a href="{% url 'history+' 'people'%}">People</a></li>
+                <li><a href="{% url 'history+' 'photos'%}">Photos</a></li>
+            </ul>
+        </li>
+        <li><a href="{% url 'contacts' %}">Contacts</a></li>
+
+    </ul>
+    <h1>Міський голова нашого міста</h1>
+    <p><img src="https://znaj.ua/crops/8075ae/620x0/1/0/2020/07/03/VPi5FijxDtDKvYI5mpHdlzQmmI9deF2k7mu0m4kE.jpeg"></p>
+    <h3>Олександр Лисенко</h3>
+
+</body>
+</html>
