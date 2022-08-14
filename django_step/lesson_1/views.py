@@ -44,3 +44,15 @@ def star_wars_page(request, name):
         "hun": "Хан. Соло — пилот космического корабля «Тысячелетний сокол», его бортмехаником и вторым пилотом является вуки по имени Чубакка."
         }
     return render(request, 'star_wars_page.html', context={'Text': names[name]})
+
+
+def check_birthday(request, year):
+    return HttpResponse('All works')
+
+
+def check_number(request, number):
+    return HttpResponse('All works')
+
+
+
+

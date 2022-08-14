@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Top of books</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/stylesheet.css'%}">
+</head>
+<body>
+    <ul id="navbar">
+        <li><a href="{% url 'main' %}">Home</a></li>
+        <li><a href="{% url 'main+' 'writers' %}">Writers</a>
+        <ul>
+            <li><a href="{% url 'writer' 'shevchenko' %}">Шевченко</a></li>
+            <li><a href="{% url 'writer' 'ukrainka' %}">Українка</a></li>
+            <li><a href="{% url 'writer' 'franko' %}">Франко</a></li>
+        </ul></li>
+        <li><a href="{% url 'main+' 'books' %}">Top 5 books</a>
+        <ul>
+            <li><a href="{% url 'books' '1' %}">1 місце</a></li>
+            <li><a href="{% url 'books' '2' %}">2 місце</a></li>
+            <li><a href="{% url 'books' '3' %}" >3 місце</a></li>
+            <li><a href="{% url 'books' '4' %}">4 місце</a></li>
+            <li><a href="{% url 'books' '5' %}">5 місцe</a></li>
+        </ul></li>
+    </ul>
+    <h3> <a href="{% url 'books' '1' %}">1. «ДОЦЯ»</a><br>
+         <a href="{% url 'books' '2' %}">2. «УСІ ЇХНІ ДЕМОНИ»</a><br>
+         <a href="{% url 'books' '3' %}">3. “ЮПАК”</a><br>
+         <a href="{% url 'books' '4' %}">4. “#БОМБАРДИР”</a><br>
+         <a href="{% url 'books' '5' %}">5. “СТОЛІТТЯ ЯКОВА”</a></h3>
+
+</body>
+</html>

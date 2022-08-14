@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ name }}</title>
+    <link rel="stylesheet" type="text/css"
+          href="{% static 'css/stylesheet.css'%}">
+</head>
+<body>
+    <ul id="navbar">
+        <li><a href="{% url 'main' %}">Home</a></li>
+        <li><a href="{% url 'main+' 'writers' %}">Writers</a>
+        <ul>
+            <li><a href="{% url 'writer' 'shevchenko' %}">Шевченко</a></li>
+            <li><a href="{% url 'writer' 'ukrainka' %}">Українка</a></li>
+            <li><a href="{% url 'writer' 'franko' %}">Франко</a></li>
+        </ul></li>
+        <li><a href="{% url 'main+' 'books' %}">Top 5 books</a>
+        <ul>
+            <li><a href="{% url 'books' '1' %}">1 місце</a></li>
+            <li><a href="{% url 'books' '2' %}">2 місце</a></li>
+            <li><a href="{% url 'books' '3' %}" >3 місце</a></li>
+            <li><a href="{% url 'books' '4' %}">4 місце</a></li>
+            <li><a href="{% url 'books' '5' %}">5 місцe</a></li>
+        </ul></li>
+    </ul>
+    <h1>{{ place }}. <i>{{ name }}</i></h1>
+    <h2>{{ author }}</h2>
+    <p><img src="{{ cover }}"></p>
+    <p>Рік виходу: {{ year }}</p>
+    <p>Видавництво: {{ publisher }}</p>
+    <p>Рейтинг: {{ rating }}</p>
+    <div id = 'describe'>
+        <p> {{ describe }}</p>
+    </div>
+
+
+</body>
+</html>
